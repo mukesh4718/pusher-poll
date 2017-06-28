@@ -7,7 +7,10 @@ The project is divided into two:
 
 Feel free to clone the repository, cd into `server` and run:
 
-```bas
+```bash
+# Install dependencies
+npm install
+# Start
 npm start
 ```
 
