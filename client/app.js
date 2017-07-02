@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
     const framework = this.frameworks[index];
     axios.post('http://localhost:3000/vote', {framework: framework})
     .then((data) => {
-      // alert (`Voted ${framework}`);
+      alert (`Voted ${framework}`);
     })
   }
 
@@ -25,9 +25,9 @@ window.addEventListener('load', () => {
 })
 
 let dataPoints = [
-  { label: "Angular", y: 71 },
-  { label: "Ember", y: 55 },
-  { label: "React", y: 50 },
+  { label: "Angular", y: 0 },
+  { label: "Ember", y: 0 },
+  { label: "React", y: 0 },
   { label: "Vue", y: 0 },
 ]
 const chartContainer = document.querySelector('#chartContainer');
@@ -53,8 +53,9 @@ if(chartContainer) {
 
   Pusher.logToConsole = true;
 
-  var pusher = new Pusher('7e41f5172eb440bf0c08', {
-    encrypted: true
+  var pusher = new Pusher('APP_KEY', {
+    encrypted: true,
+    cluster: 'APP_CLUSTER'
   });
 
   var channel = pusher.subscribe('poll');
