@@ -1,5 +1,9 @@
 ## Pusher Poll Demo
 
+[View tutorial](https://pusher.com/tutorials/live-poll-nodejs/)
+
+## Getting Started
+
 The project is divided into two:
 
 - Client
@@ -21,3 +25,11 @@ You can also start the Client using any HTTP server of your choice. I use `serve
 ```bash
 serve --port 5000
 ```
+
+## Built With
+
+...
+
+## Acknowledgements
+
+...
