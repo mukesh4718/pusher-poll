@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+require('dotenv').config();
+const express = require('express');
+const router = express.Router();
 
-var Pusher = require('pusher');
+const Pusher = require('pusher');
 
-var pusher = new Pusher({
+const pusher = new Pusher({
   appId:  process.env.APP_ID,
   key: process.env.APP_KEY,
   secret: process.env.APP_SECRET,
@@ -12,7 +13,7 @@ var pusher = new Pusher({
 });
 
 // /* Vote
-router.post('/', function(req, res, next) {
+router.post('/', (req, res, next) => {
   pusher.trigger('poll', 'vote', {
     points: 10,
     framework: req.body.framework

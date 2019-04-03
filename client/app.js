@@ -53,9 +53,9 @@ if(chartContainer) {
 
   Pusher.logToConsole = true;
 
-  var pusher = new Pusher('APP_KEY', {
+  var pusher = new Pusher('593a95c25d5abecdee3a', {
     encrypted: true,
-    cluster: 'APP_CLUSTER'
+    cluster: 'ap2'
   });
 
   var channel = pusher.subscribe('poll');
